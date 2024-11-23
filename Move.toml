@@ -1,15 +1,17 @@
 [package]
-name = "MyToken"
-version = "1.0.0"
-authors = []
+name = 'MyToken'
+version = '1.0.0'
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework", rev = "testnet" }
+AptosStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-stdlib", rev = "testnet" }
+AptosToken = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-token", rev = "testnet" }
+AptosTokenObjects = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-token-objects", rev = "testnet" }
 
 [addresses]
-
-[dev-addresses]
-
-[dependencies.AptosFramework]
-git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "mainnet"
-subdir = "aptos-move/framework/aptos-framework"
-
-[dev-dependencies]
+aptos_asset = "0x0490d5d45fa732e7eac7af4adb099dd1e5570edcc0268377bf9131f19d3029f1"
+std = "0x1"
+aptos_std = "0x1"
+aptos_framework = "0x1"
+aptos_token = "0x3"
+aptos_token_objects = "0x4"
